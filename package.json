@@ -1,0 +1,30 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "build:css": "sass src/styles.scss dist/styles.css --no-source-map",
+    "pdf": "node generate-pdf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humblezxc/CV.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/humblezxc/CV/issues"
+  },
+  "homepage": "https://github.com/humblezxc/CV#readme",
+  "devDependencies": {
+    "puppeteer": "^24.22.2",
+    "sass": "^1.93.1",
+    "vite": "^7.1.7"
+  }
+}

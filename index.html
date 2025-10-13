@@ -2,73 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles.scss">
     <title>Title</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>YAROSLAV STOPENCHUK</h1>
-        <div>
-            <p>Wroclaw, Poland 50-505</p>
-            <p>+48 575 619 850</p>
-            <p>stopenchuk.yaroslav@gmail.com</p>
+<div class="cv">
+    <div class="cv__viewport">
+        <div class="cv__page" role="document" aria-label="Curriculum Vitae — Yaroslav Stopenchuk">
+
+            <!-- ASIDE (left column) -->
+            <aside class="cv__aside" role="complementary" aria-label="Contact and summary">
+                <section class="cv__photo-section">
+                    <img class="cv__photo" src="/assets/CV_PHOTO.JPG" alt="image">
+                </section>
+                <section class="cv-aside__section" aria-labelledby="personal-heading">
+                    <h2 id="personal-heading" class="cv-aside__heading">Personal</h2>
+                    <hr class="line line--sm" />
+                    <ul class="cv-aside__list">
+                        <li class="cv-aside__item">
+                            <p>Name</p>
+                            <p>Yaroslav Stopenchuk</p>
+                        </li>
+                        <li class="cv-aside__item">
+                            <p>Address</p>
+                            <p>Nyska 91 <br /> 50-505 Wrocław (open to relocate)</p>
+                        </li>
+                        <li class="cv-aside__item">
+                            <p>Phone number</p>
+                            <a href="tel:+48575619850">+48575619850</a>
+                        </li>
+                        <li class="cv-aside__item">
+                            <p>Email</p>
+                            <a href="mailto:stopenchuk.yaroslav@gmail.com">stopenchuk.yaroslav@gmail.com</a>
+                        </li>
+                        <li class="cv-aside__item">
+                            <p>LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/yaroslavstopenchuk/">linkedin.com/in/yaroslavstopenchuk</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="cv-aside__section" aria-labelledby="skills-heading">
+                    <h2 id="skills-heading" class="cv-aside__heading">Skills</h2>
+                    <hr class="line line--sm" />
+                    <ul class="cv-aside__list">
+                        <li class="cv-aside__item">JavaScript, TypeScript</li>
+                        <li class="cv-aside__item">React, Next.js, Redux Toolkit</li>
+                        <li class="cv-aside__item">HTML5, SCSS, Tailwind</li>
+                        <li class="cv-aside__item">Webpack, Docker, Git</li>
+                        <li class="cv-aside__item">REST, GraphQL (Apollo)</li>
+                    </ul>
+                </section>
+
+                <section class="cv-aside__section" aria-labelledby="lang-heading">
+                    <h2 id="lang-heading" class="cv-aside__heading">Languages</h2>
+                    <hr class="line line--sm" />
+                    <ul class="cv-aside__list">
+                        <li class="cv-aside__item">English — B2</li>
+                        <li class="cv-aside__item">Polish — B2</li>
+                        <li class="cv-aside__item">Ukrainian — Native</li>
+                    </ul>
+                </section>
+
+                <section class="cv-aside__section" aria-labelledby="int-heading">
+                    <h2 id="int-heading" class="cv-aside__heading">Interests</h2>
+                    <hr class="line line--sm" />
+                    <p class="cv-aside__text">Traveling, hiking, collecting coins</p>
+                </section>
+            </aside>
+
+            <main class="cv__main" role="main">
+                <div class="cv-aside__contact">
+                    <h1 class="cv-aside__name">Yaroslav Stopenchuk</h1>
+                    <hr class="line line--lg" />
+                    <p class="cv-main__text">Experienced Frontend Developer with almost 2 years of commercial experience in building and maintaining high-quality web applications. Skilled in React, Next.js, JavaScript/TypeScript and modern UI development. Proven ability to work independently on projects from redesigns to full-scale development.</p>
+                </div>
+                <section class="cv-main__section cv-main__experience" aria-labelledby="exp-heading">
+                    <h2 id="exp-heading" class="cv-main__heading">Work experience</h2>
+                    <hr class="line line--sm" />
+
+                    <article class="cv-job">
+                        <div class="cv-job__header">
+                            <div class="cv-job__position">
+                                <h3 class="cv-job__title">Junior Frontend Developer</h3>
+                                <p class="cv-job__company">RED Software House, Wrocław</p>
+                            </div>
+                            <p class="cv-job__period">Oct 2023 — May 2025</p>
+                        </div>
+                        <ul class="cv-job__list">
+                            <li class="cv-job__item">Developed and optimized WCAG-compliant, responsive web apps using React, Next.js, and Tailwind.</li>
+                            <li class="cv-job__item">Contributed frontend work for Opera, Wago, Socialman, Museum of Warsaw, GregMet, Arx Regia, Geosoft.</li>
+                            <li class="cv-job__item">Built WordPress-integrated solutions with Next.js and Apollo; migrated legacy apps to modern stacks.</li>
+                        </ul>
+                    </article>
+                    <article class="cv-job">
+                        <div class="cv-job__header">
+                            <div class="cv-job__position">
+                                    <h3 class="cv-job__title">Frontend Developer Intern</h3>
+                                <p class="cv-job__company">Itransition</p>
+                            </div>
+                            <p class="cv-job__period">Sep 2022 — Nov 2022</p>
+                        </div>
+                        <ul class="cv-job__list">
+                            <li class="cv-job__item">Completed various React projects within project deadlines, demonstrating an ability to learn and apply new technologies effectively</li>
+                            <li class="cv-job__item">Attended training sessions on React, Node.js, Material UI (MUI), MySQL, and Git, gaining foundational knowledge in front-end development and database management.</li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section class="cv-main__section cv-main__projects" aria-labelledby="proj-heading">
+                    <h2 id="proj-heading" class="cv-main__heading">Key projects &amp; achievements</h2>
+                    <hr class="line line--sm" />
+
+                    <ul class="cv-projects__list">
+                        <li class="cv-projects__item"><strong>RED Software House website</strong> — main company page using React, SCSS, GSAP, Apollo Client (performance & animations).</li>
+                        <li class="cv-projects__item"><strong>Opera ad campaigns</strong> — multilingual frontends using HTML, SCSS, JS, Django templates.</li>
+                        <li class="cv-projects__item"><strong>Wago Social Network</strong> — scalable social platform (React + Redux Toolkit).</li>
+                        <li class="cv-projects__item"><strong>Socialman</strong> — refactor from jQuery to modern JS, improved load times.</li>
+                        <li class="cv-projects__item"><strong>Museum of Warsaw — Collection page</strong> — React modernization and dynamic ordering logic.</li>
+                        <li class="cv-projects__item"><strong>Geosoft web app</strong> — multilingual Next.js + headless WordPress with optimized GraphQL queries.</li>
+                    </ul>
+
+                    <p class="cv-projects__links">Links:
+                        <a class="cv-projects__link" href="https://redsoftware.io/" target="_blank" rel="noopener">redsoftware.io</a>,
+                        <a class="cv-projects__link" href="https://socialman.net/" target="_blank" rel="noopener">socialman.net</a>,
+                        <a class="cv-projects__link" href="https://kolekcje.muzeumwarszawy.pl/en/" target="_blank" rel="noopener">kolekcje.muzeumwarsawy.pl</a>
+                    </p>
+                </section>
+
+                <footer class="cv__footer" role="contentinfo">
+                    <p class="cv__footer-text">References available on request.</p>
+                </footer>
+            </main>
         </div>
-        <div>
-            <ul>
-                <li><strong>Web: </strong><a href="https://portfolio-yaroslav-stopenchuk.herokuapp.com">https://portfolio-yaroslav-stopenchuk.herokuapp.com</a></li>
-                <li><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/yaroslav-stopenchuk-415731194">https://www.linkedin.com/in/yaroslav-stopenchuk-415731194</a></li>
-            </ul>
-        </div>
-    </header>
-    <main>
-        <div>
-            <h2>Professional summary</h2>
-            <p>As a beginner front-end developer, I have completed training sessions in various front-end development
-                technologies including React, Node.js, Material UI (MUI), MySQL, and Git. I gained foundational knowledge
-                in front-end development and database management through this training.
-                Although I do not have commercial experience in front-end development, I have completed various React
-                projects and have demonstrated an ability to learn and apply new technologies effectively. I have also
-                collaborated with cross-functional teams to identify project requirements and design effective solutions,
-                demonstrating strong communication and problem-solving skills.
-                I am highly motivated and enthusiastic about pursuing a career in front-end development. I am eager to take on
-                a trainee or junior position where I can continue developing my skills and knowledge. I am a quick learner and
-                a team player, and I am willing to work diligently to meet project deadlines and deliver high-quality work.</p>
-        </div>
-        <div>
-            <h2>Work history</h2>
-            <p><strong>Front-End Developer Intern,</strong> 09/2022 – 11/2022</p>
-            <p><strong>itransition</strong> – Poland</p>
-             <ol>
-                 <li>Completed various React projects within project deadlines, demonstrating an ability to learn and apply
-                     new technologies effectively.</li>
-                 <li>Attended training sessions on React, Node.js, Material UI (MUI), MySQL, and Git, gaining foundational
-                     knowledge in front-end development and database management.</li>
-             </ol>
-        </div>
-        <div>
-            <h2>SKILLS</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>REACT</li>
-                <li>NODE JS</li>
-                <li>EXPRESS JS</li>
-                <li>JAVASCRIPT</li>
-                <li>TYPESCRIPT</li>
-                <li>PYTHON</li>
-                <li>GITHUB</li>
-            </ul>
-        </div>
-        <div>
-            <h2>EDUCATION</h2>
-            <p><strong>Bachelor of Science:</strong> Computer science, 09/2019 - 07/2023</p>
-            <p><strong>Lviv Polytechnic National University</strong> - Lviv, Ukraine</p>
-        </div>
-        <div>
-            <h2>LANGUAGES</h2>
-        </div>
-    </main>
-    <footer>
-    </footer>
+    </div>
+</div>
 </body>
 </html>
