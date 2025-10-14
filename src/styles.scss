@@ -32,7 +32,7 @@ p { margin: 0; }
   //padding: $page-padding;
   display: grid;
   grid-template-columns: $aside-width 1fr;
-  box-shadow: 0 8px 22px rgba(20,20,20,0.06);
+  box-shadow: none;
   -webkit-print-color-adjust: exact;
 }
 

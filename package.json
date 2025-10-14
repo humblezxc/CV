@@ -23,8 +23,11 @@
   },
   "homepage": "https://github.com/humblezxc/CV#readme",
   "devDependencies": {
-    "puppeteer": "^24.22.2",
+    "puppeteer": "^24.24.1",
     "sass": "^1.93.1",
     "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
   }
 }
