@@ -11,7 +11,7 @@ html, body { height: 100%; margin: 0; font-family: $base-font; -webkit-font-smoo
 a { color: $accent; text-decoration: none; }
 a:hover, a:focus { text-decoration: underline; }
 
-ul { padding: 0; margin: 0; list-style: none; }
+ul { padding: 0; margin: 0; }
 p { margin: 0; }
 
 /* Outer wrapper centers the A4 page on screen */
@@ -83,7 +83,7 @@ p { margin: 0; }
   width: 170px;
   height: 170px;
   aspect-ratio: 1 / 1;
-  object-position: top;
+  object-position: 0 -11px;
   margin: 0 auto;
 }
   .cv-aside__contact { }
@@ -110,9 +110,9 @@ p { margin: 0; }
   //letter-spacing: 0.08em;
   color: #e9edf2;
 }
-.cv-aside__list { margin: 0 0 0 0px; padding: 0; font-size: 12.5px; }
+.cv-aside__list { margin: 0 0 0 0px; padding: 0; font-size: 12.5px; list-style: none;}
 .cv-aside__item { margin-bottom: 6px; }
-.cv-aside__text { font-size: 12.5px; }
+.cv-aside__text { font-size: 12.5px; padding-right: 8mm }
 
 /* ---------------------------
    MAIN (cv__main block elements)
@@ -120,7 +120,7 @@ p { margin: 0; }
 .cv__main {
   display: flex;
   flex-direction: column;
-  gap: 6mm;
+  gap: 5mm;
   padding-left: 6mm;
   padding-top: $page-padding;
   padding-right: $page-padding;
@@ -150,10 +150,10 @@ p { margin: 0; }
 .cv-job__item { margin-bottom: 6px; font-size: 12.5px; }
 
 /* Projects */
-.cv-projects__list { margin: 6px 0 0 18px; }
+.cv-projects__list { margin: 0; list-style: none;}
 .cv-projects__item { margin-bottom: 6px; font-size: 12.5px; }
 .cv-projects__links { margin-top: 8px; font-size: 12.5px; }
-.cv-projects__link { margin-right: 6px; }
+.cv-projects__link { margin-right: 0px; }
 
 /* Footer */
 .cv__footer { border-top: 1px solid #e9edf2; padding-top: 6px; }
