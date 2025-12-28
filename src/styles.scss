@@ -1,182 +1,215 @@
-// --- Variables ---
-$base-font: 'Camphor', 'Open Sans', 'Segoe UI', system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
-$accent: #0b5cff;
-$muted: #666;
-$aside-width: 70mm;
-$page-padding: 6mm;
+/* --- Variables --- */
+:root {
+  --base-font: 'Camphor', 'Open Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --accent: #0b5cff;
+  --muted: #555;
+  --sidebar-bg: rgb(67, 74, 84);
+  --sidebar-text: #e9edf2;
+  --aside-width: 72mm; /* Трішки ширше для комфорту */
+  --page-padding: 6mm;
+}
 
-// Reset
+/* --- Reset & Base --- */
 * { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; font-family: $base-font; -webkit-font-smoothing:antialiased; }
-a { color: $accent; text-decoration: none; }
+html, body { height: 100%; margin: 0; font-family: var(--base-font); -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
 a:hover, a:focus { text-decoration: underline; }
 
 ul { padding: 0; margin: 0; }
 p { margin: 0; }
 
-/* Outer wrapper centers the A4 page on screen */
+/* --- Layout --- */
 .cv__viewport {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 12px;
+  padding: 20px;
   background: #f6f7f9;
   min-height: 100vh;
 }
 
-/* A4 page: exact mm sizes to guarantee PDF A4 output */
 .cv__page {
   width: 210mm;
-  height: 297mm;
+  min-height: 297mm;
   background: #fff;
-  //padding: $page-padding;
   display: grid;
-  grid-template-columns: $aside-width 1fr;
-  box-shadow: none;
+  grid-template-columns: var(--aside-width) 1fr;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   -webkit-print-color-adjust: exact;
 }
 
-/* ---------------------------
-   ASIDE (cv__aside block elements)
-   --------------------------- */
-
+/* --- Lines --- */
 .line {
   height: 1px;
   width: 100%;
-
-  background-color: grey;
-
-  &--sm {
-    margin: 15px 0 10px 0;
-  }
-  &--lg {
-    margin: 20px 0 15px 0;
-  }
+  background-color: #888;
+  opacity: 0.4;
 }
+.line--sm { margin: 10px 0 8px 0; }
+.line--lg { margin: 14px 0 12px 0; }
+
+/* --- ASIDE (Left Column) --- */
 .cv__aside {
-  border-right: 1px solid #e9edf2;
-  background-color: rgb(67, 74, 84);
-  //padding-right: 8px;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: var(--page-padding);
+  padding-right: 4mm;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  color: #e9edf2;
-  padding-top: $page-padding;
-  padding-left: $page-padding;
-
-  a {
-    color: #e9edf2;
-    text-decoration: none;
-  }
 }
 
+.cv__aside a { color: var(--sidebar-text); text-decoration: none; }
+.cv__aside a:hover { text-decoration: underline; }
+
+/* PHOTO FIX */
 .cv__photo-section {
+  margin-bottom: 15px;
   display: flex;
-  align-items: center;
-  margin-right: 6mm;
+  justify-content: center;
 }
 .cv__photo {
-  //width: 100%;
-  //height: auto;
+  width: 150px; /* Трохи більший розмір */
+  height: 150px;
   border-radius: 50%;
+
+  /* Магія для центрування */
   object-fit: cover;
-  width: 170px;
-  height: 170px;
-  aspect-ratio: 1 / 1;
-  object-position: 0 -11px;
-  margin: 0 auto;
-}
-  .cv-aside__contact { }
-.cv-aside__name {
-  margin: 0 0 6px 0;
-  font-size: 26px;
-  line-height: 1.05;
-}
-.cv-aside__role {
-  margin: 0 0 10px 0;
-  color: $muted;
-  font-size: 12px;
-}
-.cv-aside__contacts { }
-.cv-aside__contact-item { margin: 4px 0; font-size: 11.5px; }
 
-/* sections inside aside */
-.cv-aside__section { margin-top: 10px; }
+  /* Змінюй друге значення (20%), щоб рухати фото вгору/вниз */
+  /* 0% = верх фото, 50% = центр, 100% = низ */
+  object-position: center 20%;
+
+  border: 3px solid rgba(255,255,255,0.2);
+}
+
+.cv-aside__section { margin-top: 15px; }
+
 .cv-aside__heading {
-  margin: 12px 0 8px 0;
-  font-size: 14px;
-  font-weight: 600;
-  //text-transform: uppercase;
-  //letter-spacing: 0.08em;
-  color: #e9edf2;
+  margin: 0;
+  font-size: 14px; /* Збільшив шрифт */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sidebar-text);
 }
-.cv-aside__list { margin: 0 0 0 0px; padding: 0; font-size: 12.5px; list-style: none;}
-.cv-aside__item { margin-bottom: 6px; }
-.cv-aside__text { font-size: 12.5px; padding-right: 8mm }
 
-/* ---------------------------
-   MAIN (cv__main block elements)
-   --------------------------- */
+.cv-aside__list {
+  list-style: none;
+  font-size: 12.5px; /* Комфортний розмір */
+  line-height: 1.4;
+}
+.cv-aside__item { margin-bottom: 5px; }
+.cv-aside__text {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* --- MAIN CONTENT (Right Column) --- */
 .cv__main {
+  padding: var(--page-padding);
+  padding-left: 6mm;
   display: flex;
   flex-direction: column;
-  gap: 5mm;
-  padding-left: 6mm;
-  padding-top: $page-padding;
-  padding-right: $page-padding;
-
+  gap: 10px;
 }
 
-.cv-main__top { }
-.cv-main__meta { margin: 0; font-size: 11px; color: $muted; }
-
-.cv-main__section { }
-.cv-main__heading {
-  margin: 0 0 6px 0;
-  font-size: 14px;
+.cv-aside__name {
+  margin: 0 0 5px 0;
+  font-size: 24px; /* Велике ім'я */
+  line-height: 1;
   font-weight: 700;
-  //text-transform: uppercase;
-  //color: $accent;
+  color: #222;
 }
-.cv-main__text { font-size: 12.5px; line-height: 1.35; color: #111; }
 
-/* Job block */
-.cv-job { margin-bottom: 8px; }
-.cv-job__header { display: flex; justify-content: space-between; }
-.cv-job__title { margin: 0 0 2px 0; font-size: 13px; }
-.cv-job__company { font-size: 11px; color: $muted; margin-bottom: 6px; }
-.cv-job__period { font-size: 11px; color: $muted; margin-bottom: 6px; }
-.cv-job__list { margin: 6px 0 0 18px; }
-.cv-job__item { margin-bottom: 6px; font-size: 12.5px; }
+.cv-main__text {
+  font-size: 12px; /* Читабельний текст */
+  line-height: 1.4;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Section Headings */
+.cv-main__section { page-break-inside: avoid; }
+
+.cv-main__heading {
+  margin: 0;
+  font-size: 15px; /* Збільшив заголовок */
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+/* Jobs Block */
+.cv-job {
+  margin-bottom: 12px; /* Більше повітря між роботами */
+  page-break-inside: avoid;
+}
+
+.cv-job__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.cv-job__title {
+  margin: 0;
+  font-size: 14px; /* Збільшив назву посади */
+  font-weight: 700;
+  color: #000;
+}
+
+.cv-job__company {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.cv-job__period {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.cv-job__list {
+  margin: 4px 0 0 18px;
+  list-style-type: disc;
+}
+
+.cv-job__item {
+  margin-bottom: 3px;
+  font-size: 12px; /* Основний шрифт списків */
+  line-height: 1.35;
+  color: #222;
+}
 
 /* Projects */
-.cv-projects__list { margin: 0; list-style: none;}
-.cv-projects__item { margin-bottom: 6px; font-size: 12.5px; }
-.cv-projects__links { margin-top: 8px; font-size: 12.5px; }
-.cv-projects__link { margin-right: 0px; }
+.cv-projects__list { list-style: none; }
+.cv-projects__item {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.35;
+}
+.cv-link {
+  font-size: 11px;
+  margin-left: 5px;
+  white-space: nowrap;
+  color: var(--accent);
+  font-weight: 600;
+}
 
-/* Footer */
-.cv__footer { border-top: 1px solid #e9edf2; padding-top: 6px; }
-.cv__footer-text { font-size: 11.5px; color: $muted; }
+/* --- Print Rules --- */
+@page { size: A4; margin: 0; }
 
-/* ---------------------------
-   Print / PDF rules
-   --------------------------- */
-@page { size: A4; margin: 0; } // we manage margins with .cv__page padding
 @media print {
   body { background: #fff; }
-  .cv__viewport { background: #fff; padding: 0; }
+  .cv__viewport { background: #fff; padding: 0; min-height: auto; }
   .cv__page {
     box-shadow: none;
     width: 210mm;
     height: 297mm;
-    page-break-after: always;
   }
-
-  /* Avoid splitting key blocks across pages */
-  .cv-job, .cv-projects__list, .cv-main__profile, .cv-aside { page-break-inside: avoid; }
-  a::after { content: " (" attr(href) ")"; font-size: 9px; color: #333; }
+  a::after { content: none !important; }
 }
-
-/* No responsive stacking — keep A4 two-column layout always.
-   On small screens users can pinch/zoom and scroll to view the page. */

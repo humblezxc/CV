@@ -10,41 +10,53 @@
 <body>
 <div class="cv">
     <div class="cv__viewport">
-        <div class="cv__page" role="document" aria-label="Curriculum Vitae — Yaroslav Stopenchuk">
-            <!-- ASIDE (left column) -->
-            <aside class="cv__aside" role="complementary" aria-label="Contact and summary">
+        <div class="cv__page" role="document">
+            <aside class="cv__aside">
                 <section class="cv__photo-section">
-                    <img class="cv__photo" src="/assets/CV_PHOTO.JPG" alt="Yaroslav Stopenchuk photo">
+                    <img class="cv__photo" src="/assets/CV_PHOTO.JPG" alt="Yaroslav Stopenchuk">
                 </section>
-                <section class="cv-aside__section" aria-labelledby="personal-heading">
-                    <h2 id="personal-heading" class="cv-aside__heading">Personal</h2>
-                    <hr class="line line--sm" />
+
+                <section class="cv-aside__section">
+                    <h2 class="cv-aside__heading">Personal</h2>
+                    <div class="line line--sm"></div>
                     <ul class="cv-aside__list">
-                        <li class="cv-aside__item"><p>Name</p><p>Yaroslav Stopenchuk</p></li>
                         <li class="cv-aside__item"><p>Address</p><p>Wrocław, Poland</p></li>
                         <li class="cv-aside__item"><p>Phone</p><a href="tel:+48575619850">+48 575 619 850</a></li>
                         <li class="cv-aside__item"><p>Email</p><a href="mailto:stopenchuk.yaroslav@gmail.com">stopenchuk.yaroslav@gmail.com</a></li>
-                        <li class="cv-aside__item"><p>LinkedIn</p><a href="https://www.linkedin.com/in/yaroslav-stopenchuk/">linkedin.com/in/yaroslav-stopenchuk</a></li>
+                        <li class="cv-aside__item"><p>LinkedIn</p><a href="https://www.linkedin.com/in/yaroslav-stopenchuk/" target="_blank" rel="noopener noreferrer">in/yaroslav-stopenchuk</a></li>
+                        <li class="cv-aside__item"><p>GitHub</p><a href="https://github.com/humblezxc" target="_blank" rel="noopener noreferrer">github.com/humblezxc</a></li>
                     </ul>
                 </section>
-                <section class="cv-aside__section" aria-labelledby="skills-heading">
-                    <h2 id="skills-heading" class="cv-aside__heading">Skills</h2>
-                    <hr class="line line--sm" />
+
+                <section class="cv-aside__section">
+                    <h2 class="cv-aside__heading">Skills</h2>
+                    <div class="line line--sm"></div>
                     <ul class="cv-aside__list">
-                        <li class="cv-aside__item">JavaScript, TypeScript</li>
-                        <li class="cv-aside__item">React, Next.js</li>
-                        <li class="cv-aside__item">Redux Toolkit, React Query, Apollo</li>
-                        <li class="cv-aside__item">HTML5, CSS3, SCSS, Tailwind CSS</li>
-                        <li class="cv-aside__item">Bootstrap, Node.js, Express.js</li>
-                        <li class="cv-aside__item">REST API, GraphQL, headless WordPress</li>
-                        <li class="cv-aside__item">Git, Docker, Webpack, Vite, CI/CD</li>
+                        <li class="cv-aside__item"><strong>React, Next.js, Gatsby</strong></li>
+                        <li class="cv-aside__item"><strong>JavaScript, TypeScript</strong></li>
+                        <li class="cv-aside__item">Redux Toolkit, React Query</li>
+                        <li class="cv-aside__item">HTML5, SCSS, Tailwind CSS</li>
+                        <li class="cv-aside__item">Web Vitals, Performance Opt.</li>
                         <li class="cv-aside__item">Jest, React Testing Library</li>
-                        <li class="cv-aside__item">Figma, GSAP</li>
+                        <li class="cv-aside__item">Git, Docker, Webpack</li>
+                        <li class="cv-aside__item">Node.js, NestJS (Basic)</li>
                     </ul>
                 </section>
-                <section class="cv-aside__section" aria-labelledby="lang-heading">
-                    <h2 id="lang-heading" class="cv-aside__heading">Languages</h2>
-                    <hr class="line line--sm" />
+
+                <section class="cv-aside__section">
+                    <h2 class="cv-aside__heading">Soft Skills</h2>
+                    <div class="line line--sm"></div>
+                    <ul class="cv-aside__list">
+                        <li class="cv-aside__item">Mentoring & Onboarding</li>
+                        <li class="cv-aside__item">Agile / Scrum methodology</li>
+                        <li class="cv-aside__item">Pixel-perfect attention</li>
+                        <li class="cv-aside__item">Problem Solving</li>
+                    </ul>
+                </section>
+
+                <section class="cv-aside__section">
+                    <h2 class="cv-aside__heading">Languages</h2>
+                    <div class="line line--sm"></div>
                     <ul class="cv-aside__list">
                         <li class="cv-aside__item">English — B2</li>
                         <li class="cv-aside__item">Polish — B2</li>
@@ -52,110 +64,112 @@
                     </ul>
                 </section>
 
-                <!-- Availability (ATS-friendly, concise) -->
-                <section class="cv-aside__section" aria-labelledby="avail-heading">
-                    <h2 id="avail-heading" class="cv-aside__heading">Availability</h2>
-                    <hr class="line line--sm" />
+                <section class="cv-aside__section">
+                    <h2 class="cv-aside__heading">Availability</h2>
+                    <div class="line line--sm"></div>
                     <p class="cv-aside__text">
-                        Available immediately. Open to Remote, Hybrid or On-site roles (preferred: Wrocław). Willing to relocate to Warsaw, Kraków, Poznań.
+                        Available immediately. Open to Remote, Hybrid, or On-site roles (preferred: Wrocław). Willing to relocate.
                     </p>
                 </section>
             </aside>
 
-            <main class="cv__main" role="main">
+            <main class="cv__main">
                 <div class="cv-aside__contact">
                     <h1 class="cv-aside__name">Yaroslav Stopenchuk</h1>
-                    <hr class="line line--lg" />
-                    <p class="cv-main__text">Frontend Developer — React & Next.js (JavaScript / TypeScript). About 2 years' commercial experience building accessible, unit-tested interfaces. Skilled at shipping features quickly, resolving production issues, and collaborating with product teams. Available immediately in Poland.</p>
+                    <div class="line line--lg"></div>
+                    <p class="cv-main__text">
+                        <strong>Frontend Developer</strong> with 2+ years of experience specializing in <strong>React, Next.js, and TypeScript</strong>. Skilled in modernizing legacy systems, optimizing web performance (LCP/CLS), and delivering pixel-perfect interfaces. Proven ability to mentor juniors and build full-stack MVPs. Open to complex technical challenges.
+                    </p>
                 </div>
 
-                <section class="cv-main__section cv-main__experience" aria-labelledby="exp-heading">
-                    <h2 id="exp-heading" class="cv-main__heading">Work Experience</h2>
-                    <hr class="line line--sm" />
+                <section class="cv-main__section">
+                    <h2 class="cv-main__heading">Work Experience</h2>
+                    <div class="line line--sm"></div>
+
                     <article class="cv-job">
                         <div class="cv-job__header">
-                            <div class="cv-job__position">
-                                <h3 class="cv-job__title">Junior Frontend Developer</h3>
-                                <p class="cv-job__company">RED Software House, Wrocław</p>
+                            <div>
+                                <h3 class="cv-job__title">Fullstack Developer (Startup MVP)</h3>
+                                <p class="cv-job__company">Smart Shift Scheduler (Freelance)</p>
                             </div>
-                            <p class="cv-job__period">Oct 2023 — May 2025</p>
+                            <p class="cv-job__period">May 2025 — Present</p>
                         </div>
                         <ul class="cv-job__list">
-                            <li class="cv-job__item">Delivered front-end and campaign pages for 10+ client projects using JavaScript, React, Next.js, and Gatsby under tight deadlines.</li>
-                            <li class="cv-job__item">Migrated 12 core pages to a component-driven React/Gatsby stack, cutting editorial turnaround time by 30%.</li>
-                            <li class="cv-job__item">Authored 28 unit tests (Jest & React Testing Library), increasing coverage from 22% to 48%.</li>
-                            <li class="cv-job__item">Executed 8 GSAP animations across campaigns and optimized initial load times by 12%.</li>
-                            <li class="cv-job__item">Refactored key modules into component-driven patterns and applied a 7-1 SCSS structure to simplify styling.</li>
+                            <li class="cv-job__item">Developing a SaaS MVP for retail workforce management using <strong>Next.js 14</strong> and <strong>TypeScript</strong>.</li>
+                            <li class="cv-job__item">Implementing AI-driven schedule generation (OpenAI API) to optimize staff shifts based on availability.</li>
+                            <li class="cv-job__item">Building a responsive calendar interface with React & Tailwind CSS.</li>
                         </ul>
                     </article>
 
                     <article class="cv-job">
                         <div class="cv-job__header">
-                            <div class="cv-job__position">
+                            <div>
+                                <h3 class="cv-job__title">Frontend Developer</h3>
+                                <p class="cv-job__company">RED Software House, Wrocław</p>
+                            </div>
+                            <p class="cv-job__period">Oct 2023 — May 2025</p>
+                        </div>
+                        <ul class="cv-job__list">
+                            <li class="cv-job__item">Delivered frontend for 10+ commercial projects using React, Gatsby, and Headless CMS.</li>
+                            <li class="cv-job__item"><strong>Warsaw Museum Collection:</strong> Migrated legacy React Class components to Functional components (Hooks), fixed Docker dev environment, and implemented custom shopping cart logic.</li>
+                            <li class="cv-job__item"><strong>Elektrobohater (Wago):</strong> Built a social network for electricians with feed, filtering, and profile editing using <strong>Redux Toolkit</strong> and <strong>React Query</strong>.</li>
+                            <li class="cv-job__item">Refactored the company site to Gatsby/React, implementing scalable SCSS architecture and GSAP animations.</li>
+                            <li class="cv-job__item">Mentored a Junior Developer during onboarding, assisting with project structure and best practices.</li>
+                            <li class="cv-job__item">Collaborated with the team to ensure high code quality and wrote unit tests using <strong>Jest & React Testing Library</strong>.</li>
+                        </ul>
+                    </article>
+
+                    <article class="cv-job">
+                        <div class="cv-job__header">
+                            <div>
                                 <h3 class="cv-job__title">Frontend Developer Intern</h3>
                                 <p class="cv-job__company">Itransition</p>
                             </div>
                             <p class="cv-job__period">Sep 2022 — Nov 2022</p>
                         </div>
                         <ul class="cv-job__list">
-                            <li class="cv-job__item">Developed reusable React components and UI patterns using Material-UI; completed sprint tasks during a <strong>3-month</strong> internship.</li>
-                            <li class="cv-job__item">Completed 4 learning projects during the internship, delivering production-ready React components and UI demos; worked independently and met sprint timelines.</li>
-                            <li class="cv-job__item">Improved component reusability by defining naming and folder conventions that simplified onboarding.</li>
+                            <li class="cv-job__item">Completed intensive training building reusable React components with Material-UI.</li>
+                            <li class="cv-job__item">Delivered 4 production-ready UI demos within sprint deadlines.</li>
                         </ul>
                     </article>
                 </section>
 
-                <!-- Projects (ATS-friendly: varied verbs and clearer impact) -->
-                <section class="cv-main__section cv-main__projects" aria-labelledby="projects-heading">
-                    <h2 id="projects-heading" class="cv-main__heading">Projects</h2>
-                    <hr class="line line--sm" />
+                <section class="cv-main__section">
+                    <h2 class="cv-main__heading">Key Projects</h2>
+                    <div class="line line--sm"></div>
                     <ul class="cv-projects__list">
                         <li class="cv-projects__item">
-                            <strong>Socialman</strong> — Refactored legacy jQuery into a component-driven JavaScript implementation; consolidated ~6,000 lines down to &lt;1,000 and improved rendering performance by ~40%.
-                        </li>
-<!--                        <li class="cv-projects__item">-->
-<!--                            <strong>Geosoft</strong> — Engineered a Next.js + TypeScript frontend and connected it to a headless WordPress backend via Apollo (GraphQL), streamlining content updates and improving routing efficiency.-->
-<!--                        </li>-->
-<!--                        <li class="cv-projects__item">-->
-<!--                            <strong>Geosoft</strong> — Next.js + TypeScript frontend integrated with headless WordPress via Apollo (GraphQL); optimized content delivery and routing.-->
-<!--                        </li>-->
-
-                        <li class="cv-projects__item">
-                            <strong>RED Software House site</strong> — Ported 12 core pages to React/Gatsby, introduced 7-1 SCSS structure and GSAP animations; enabled CMS-editable pages and reduced editorial turnaround by ~30%.
+                            <strong>Warsaw Museum Collections</strong> (React, Docker) <br>
+                            Refactored legacy codebase from Class components to Hooks and implemented shopping cart.
+                            <a href="https://kolekcje.muzeumwarszawy.pl/en/" class="cv-link" target="_blank" rel="noopener noreferrer">[Live Site]</a>
                         </li>
                         <li class="cv-projects__item">
-                            <strong>Wago Social Network</strong> — Developed features (infinite scroll, post management, filters, search, profile editing) using Redux Toolkit, React Query and Axios to improve feed responsiveness and user engagement.
+                            <strong>Elektrobohater / Wago</strong> (React, Redux, React Query) <br>
+                            Developed a social platform featuring infinite scroll, advanced filtering, and user profiles.
+                            <a href="https://elektrobohater.pl/" class="cv-link" target="_blank" rel="noopener noreferrer">[Live Site]</a>
                         </li>
-
-<!--                        <li class="cv-projects__item">-->
-<!--                            <strong>Wago</strong> — Implemented feed features (infinite scroll, filters, search) with Redux Toolkit & React Query, increasing responsiveness and engagement.-->
-<!--                        </li>-->
-
                         <li class="cv-projects__item">
-                            <strong>Opera ad campaigns</strong> — Built campaign sites with vanilla JS/HTML/CSS under tight deadlines; a global campaign reached ~50M impressions on Twitter.
+                            <strong>RED Software Site</strong> (Gatsby, GSAP) <br>
+                            Full refactor. Implemented dynamic routing for multi-language support and animations.
+                            <a href="https://redsoftware.io/" class="cv-link" target="_blank" rel="noopener noreferrer">[Live Site]</a>
+                        </li>
+                        <li class="cv-projects__item">
+                            <strong>Opera Ad Campaigns</strong> (Vanilla JS, HTML) <br>
+                            Built pixel-perfect promo sites under strict deadlines (Global campaign, ~50M impressions).
                         </li>
                     </ul>
-
-                    <!-- Full URLs (plain text) to help parsers that don't read only hrefs -->
-                    <p class="cv-projects__links">
-                        Links:
-                        <a class="cv-projects__link" href="https://redsoftware.io/" target="_blank" rel="noopener">https://redsoftware.io/</a>,
-                        <a class="cv-projects__link" href="https://socialman.net/" target="_blank" rel="noopener">https://socialman.net/</a>,
-<!--                        <a class="cv-projects__link" href="https://www.geosoft.com.pl/pl" target="_blank" rel="noopener">https://www.geosoft.com.pl/pl</a>,-->
-                        <a class="cv-projects__link" href="https://elektrobohater.pl/" target="_blank" rel="noopener">https://elektrobohater.pl/</a>
-                    </p>
                 </section>
 
-                <section class="cv-main__section cv-main__education" aria-labelledby="edu-heading">
-                    <h2 id="edu-heading" class="cv-main__heading">Education</h2>
-                    <hr class="line line--sm" />
+                <section class="cv-main__section">
+                    <h2 class="cv-main__heading">Education</h2>
+                    <div class="line line--sm"></div>
                     <article class="cv-job">
                         <div class="cv-job__header">
-                            <div class="cv-job__position">
+                            <div>
                                 <h3 class="cv-job__title">Bachelor of Computer Science</h3>
-                                <p class="cv-job__company">Lviv Polytechnic National University, Lviv</p>
+                                <p class="cv-job__company">Lviv Polytechnic National University</p>
                             </div>
-                            <p class="cv-job__period">Sep 2019 — Jul 2023</p>
+                            <p class="cv-job__period">2019 — 2023</p>
                         </div>
                     </article>
                 </section>
