@@ -68,8 +68,9 @@ p { margin: 0; }
   justify-content: center;
 }
 .cv__photo {
-  width: 150px; /* Трохи більший розмір */
-  height: 150px;
+  --size: 175px;
+  width: var(--size); /* Трохи більший розмір */
+  height: var(--size);
   border-radius: 50%;
 
   /* Магія для центрування */
@@ -77,7 +78,7 @@ p { margin: 0; }
 
   /* Змінюй друге значення (20%), щоб рухати фото вгору/вниз */
   /* 0% = верх фото, 50% = центр, 100% = низ */
-  object-position: center 20%;
+  object-position: center 12%;
 
   border: 3px solid rgba(255,255,255,0.2);
 }
