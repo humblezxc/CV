@@ -110,7 +110,7 @@ p { margin: 0; }
   padding-left: 6mm;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
 }
 
 .cv-aside__name {
@@ -142,7 +142,7 @@ p { margin: 0; }
 
 /* Jobs Block */
 .cv-job {
-  margin-bottom: 12px; /* Більше повітря між роботами */
+  margin-bottom: 9px;
   page-break-inside: avoid;
 }
 
