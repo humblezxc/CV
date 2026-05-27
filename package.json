@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "build:css": "sass src/styles.scss dist/styles.css --no-source-map",
-    "pdf": "node generate-pdf.js"
+    "pdf": "node export-cv.js"
   },
   "repository": {
     "type": "git",

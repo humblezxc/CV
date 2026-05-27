@@ -1,215 +1,174 @@
-/* --- Variables --- */
+/* ============================================================
+   Designed CV — refined editorial minimalism
+   Newsreader (display) + Hanken Grotesk (body)
+   Slate sidebar · white paper · blue accent
+   Tuned to a single A4 page.
+   ============================================================ */
+
 :root {
-  --base-font: 'Camphor', 'Open Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --ink: #434a54;
+  --paper: #ffffff;
   --accent: #0b5cff;
+  --text: #23262d;
   --muted: #555;
-  --sidebar-bg: rgb(67, 74, 84);
   --sidebar-text: #e9edf2;
-  --aside-width: 72mm; /* Трішки ширше для комфорту */
-  --page-padding: 6mm;
+  --sidebar-muted: #aab0b8;
+
+  --display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --body: 'Hanken Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --aside-w: 68mm;
+  --pad: 7.2mm;
 }
 
-/* --- Reset & Base --- */
 * { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; font-family: var(--base-font); -webkit-font-smoothing: antialiased; }
+html, body { margin: 0; height: 100%; }
+body {
+  font-family: var(--body);
+  color: var(--text);
+  background: #e8e9ec;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+p, h1, h2, h3, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
 a { color: var(--accent); text-decoration: none; }
-a:hover, a:focus { text-decoration: underline; }
 
-ul { padding: 0; margin: 0; }
-p { margin: 0; }
-
-/* --- Layout --- */
+/* --- Page shell --- */
 .cv__viewport {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
-  background: #f6f7f9;
+  padding: 24px;
   min-height: 100vh;
 }
-
 .cv__page {
   width: 210mm;
   min-height: 297mm;
-  background: #fff;
+  background: var(--paper);
   display: grid;
-  grid-template-columns: var(--aside-width) 1fr;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  grid-template-columns: var(--aside-w) 1fr;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
   -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
-/* --- Lines --- */
-.line {
-  height: 1px;
-  width: 100%;
-  background-color: #888;
-  opacity: 0.4;
-}
-.line--sm { margin: 10px 0 8px 0; }
-.line--lg { margin: 14px 0 12px 0; }
-
-/* --- ASIDE (Left Column) --- */
+/* --- Sidebar --- */
 .cv__aside {
-  background-color: var(--sidebar-bg);
+  background: var(--ink);
   color: var(--sidebar-text);
-  padding: var(--page-padding);
-  padding-right: 4mm;
+  padding: var(--pad) 6.5mm;
   display: flex;
   flex-direction: column;
+  gap: 3.4mm;
 }
-
-.cv__aside a { color: var(--sidebar-text); text-decoration: none; }
-.cv__aside a:hover { text-decoration: underline; }
-
-/* PHOTO FIX */
-.cv__photo-section {
-  display: flex;
-  justify-content: center;
-}
+.cv__photo-wrap { display: flex; justify-content: center; }
 .cv__photo {
-  --size: 175px;
-  width: var(--size); /* Трохи більший розмір */
-  height: var(--size);
+  width: 38mm;
+  height: 38mm;
   border-radius: 50%;
-
-  /* Магія для центрування */
   object-fit: cover;
-
-  /* Змінюй друге значення (20%), щоб рухати фото вгору/вниз */
-  /* 0% = верх фото, 50% = центр, 100% = низ */
   object-position: center 12%;
-
-  border: 3px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255, 255, 255, 0.16);
 }
 
-.cv-aside__section { margin-top: 12px; }
+.aside-section__title {
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 11.8pt;
+  color: #fff;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
 
-.cv-aside__heading {
-  margin: 0;
-  font-size: 14px; /* Збільшив шрифт */
-  font-weight: 700;
+.aside-list { font-size: 8.6pt; line-height: 1.42; }
+.aside-list li { margin-bottom: 2.5px; overflow-wrap: anywhere; }
+.aside-list__k {
+  display: block;
+  color: var(--sidebar-muted);
+  font-size: 7.1pt;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--sidebar-text);
+  letter-spacing: 0.06em;
+}
+.aside-list--plain li { margin-bottom: 2.5px; }
+.cv__aside a { color: var(--sidebar-text); }
+
+.skills { font-size: 8.6pt; line-height: 1.4; }
+.skills li { margin-bottom: 2.5px; }
+.skills__cat {
+  display: block;
+  color: #8fb3ff;
+  font-weight: 700;
+  font-size: 7.3pt;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1px;
 }
 
-.cv-aside__list {
-  list-style: none;
-  font-size: 12.5px; /* Комфортний розмір */
-  line-height: 1.4;
-}
-.cv-aside__item { margin-bottom: 5px; }
-.cv-aside__text {
-  font-size: 12px;
-  line-height: 1.4;
-}
+.aside-text { font-size: 8.6pt; line-height: 1.45; }
 
-/* --- MAIN CONTENT (Right Column) --- */
+/* --- Main column --- */
 .cv__main {
-  padding: var(--page-padding);
-  padding-left: 6mm;
+  padding: var(--pad) var(--pad) var(--pad) 8mm;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 1.6mm;
 }
 
-.cv-aside__name {
-  margin: 0 0 5px 0;
-  font-size: 24px; /* Велике ім'я */
-  line-height: 1;
-  font-weight: 700;
-  color: #222;
-}
-
-.cv-main__text {
-  font-size: 12px; /* Читабельний текст */
-  line-height: 1.4;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-/* Section Headings */
-.cv-main__section { page-break-inside: avoid; }
-
-.cv-main__heading {
-  margin: 0;
-  font-size: 15px; /* Збільшив заголовок */
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--accent);
-  letter-spacing: 0.05em;
-}
-
-/* Jobs Block */
-.cv-job {
-  margin-bottom: 9px;
-  page-break-inside: avoid;
-}
-
-.cv-job__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 2px;
-}
-
-.cv-job__title {
-  margin: 0;
-  font-size: 14px; /* Збільшив назву посади */
-  font-weight: 700;
-  color: #000;
-}
-
-.cv-job__company {
-  font-size: 12px;
-  color: var(--muted);
+.masthead__name {
+  font-family: var(--display);
+  font-optical-sizing: auto;
   font-weight: 600;
-  margin-bottom: 2px;
+  font-size: 24pt;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.masthead__title { font-size: 11.8pt; font-weight: 600; color: var(--accent); margin-top: 4px; }
+.masthead__stack { font-size: 9.2pt; color: var(--muted); letter-spacing: 0.03em; margin-top: 2px; }
+
+.summary { font-size: 9.5pt; line-height: 1.38; }
+.summary strong { color: var(--ink); font-weight: 600; }
+
+.main-section { display: flex; flex-direction: column; gap: 1.3mm; }
+.main-section__title {
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 13pt;
+  color: var(--ink);
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--accent);
 }
 
-.cv-job__period {
-  font-size: 12px;
+.job { page-break-inside: avoid; break-inside: avoid; }
+.job__head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.job__role { font-size: 10.8pt; font-weight: 700; color: var(--ink); }
+.job__dates {
+  font-size: 8.6pt;
   color: var(--muted);
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
+.job__org { font-size: 9.2pt; font-weight: 600; color: var(--accent); margin: 0 0 1.5px; }
+.job__bullets { padding-left: 14px; list-style: disc; }
+.job__bullets li { font-size: 9.2pt; line-height: 1.32; margin-bottom: 1.2px; }
+.job__bullets strong { color: var(--ink); font-weight: 600; }
 
-.cv-job__list {
-  margin: 4px 0 0 18px;
-  list-style-type: disc;
-}
+.projects li { font-size: 9.2pt; line-height: 1.32; margin-bottom: 2.2px; }
+.projects strong { color: var(--ink); font-weight: 700; }
+.projects__tech { color: var(--muted); font-size: 8.5pt; }
+.cv-link { color: var(--accent); font-weight: 600; font-size: 8.4pt; margin-left: 4px; white-space: nowrap; }
 
-.cv-job__item {
-  margin-bottom: 3px;
-  font-size: 12px; /* Основний шрифт списків */
-  line-height: 1.35;
-  color: #222;
-}
-
-/* Projects */
-.cv-projects__list { list-style: none; }
-.cv-projects__item {
-  margin-bottom: 8px;
-  font-size: 12px;
-  line-height: 1.35;
-}
-.cv-link {
-  font-size: 11px;
-  margin-left: 5px;
-  white-space: nowrap;
-  color: var(--accent);
-  font-weight: 600;
-}
-
-/* --- Print Rules --- */
+/* --- Print --- */
 @page { size: A4; margin: 0; }
-
 @media print {
   body { background: #fff; }
-  .cv__viewport { background: #fff; padding: 0; min-height: auto; }
-  .cv__page {
-    box-shadow: none;
-    width: 210mm;
-    height: 297mm;
-  }
+  .cv__viewport { padding: 0; min-height: auto; }
+  .cv__page { box-shadow: none; width: 210mm; height: 297mm; }
+  a { color: var(--accent); }
   a::after { content: none !important; }
 }

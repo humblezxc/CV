@@ -2,194 +2,167 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>CV — Yaroslav Stopenchuk</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/styles.scss">
+    <title>Yaroslav Stopenchuk - CV</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles.scss">
 </head>
 <body>
 <div class="cv">
     <div class="cv__viewport">
         <div class="cv__page" role="document">
+
             <aside class="cv__aside">
-                <section class="cv__photo-section">
+                <div class="cv__photo-wrap">
                     <img class="cv__photo" src="/assets/CV_PHOTO.JPG" alt="Yaroslav Stopenchuk">
-                </section>
+                </div>
 
-                <section class="cv-aside__section">
-                    <h2 class="cv-aside__heading">Personal</h2>
-                    <div class="line line--sm"></div>
-                    <ul class="cv-aside__list">
-                        <li class="cv-aside__item"><p>Address</p><p>Wrocław, Poland</p></li>
-                        <li class="cv-aside__item"><p>Phone</p><a href="tel:+48575619850">+48 575 619 850</a></li>
-                        <li class="cv-aside__item"><p>Email</p><a href="mailto:stopenchuk.yaroslav@gmail.com">stopenchuk.yaroslav@gmail.com</a></li>
-                        <li class="cv-aside__item"><p>LinkedIn</p><a href="https://www.linkedin.com/in/yaroslav-stopenchuk/" target="_blank" rel="noopener noreferrer">in/yaroslav-stopenchuk</a></li>
-                        <li class="cv-aside__item"><p>Portfolio</p><a href="https://portfolio-yaroslav-stopenchuk.vercel.app" target="_blank" rel="noopener noreferrer">portfolio-yaroslav-stopenchuk</a></li>
-                        <li class="cv-aside__item"><p>GitHub</p><a href="https://github.com/humblezxc" target="_blank" rel="noopener noreferrer">github.com/humblezxc</a></li>
+                <section class="aside-section">
+                    <h2 class="aside-section__title">Contact</h2>
+                    <ul class="aside-list">
+                        <li><span class="aside-list__k">Location</span> Wrocław, Poland</li>
+                        <li><span class="aside-list__k">Phone</span> <a href="tel:+48575619850">+48 575 619 850</a></li>
+                        <li><span class="aside-list__k">Email</span> <a href="mailto:stopenchuk.yaroslav@gmail.com">stopenchuk.yaroslav@gmail.com</a></li>
+                        <li><span class="aside-list__k">LinkedIn</span> <a href="https://www.linkedin.com/in/yaroslav-stopenchuk/">in/yaroslav-stopenchuk</a></li>
+                        <li><span class="aside-list__k">GitHub</span> <a href="https://github.com/humblezxc">github.com/humblezxc</a></li>
+                        <li><span class="aside-list__k">Portfolio</span> <a href="https://portfolio-yaroslav-stopenchuk.vercel.app">portfolio-yaroslav-stopenchuk</a></li>
                     </ul>
                 </section>
 
-                <section class="cv-aside__section">
-                    <h2 class="cv-aside__heading">Skills</h2>
-                    <div class="line line--sm"></div>
-                    <ul class="cv-aside__list">
-                        <li class="cv-aside__item"><strong>React, Next.js, TypeScript</strong></li>
-                        <li class="cv-aside__item"><strong>JavaScript, Node.js</strong></li>
-                        <li class="cv-aside__item">Redux Toolkit, React Query</li>
-                        <li class="cv-aside__item">Supabase, PostgreSQL, Stripe</li>
-                        <li class="cv-aside__item">Tailwind CSS, SCSS, HTML5</li>
-                        <li class="cv-aside__item">Zod, react-hook-form, Radix UI</li>
-                        <li class="cv-aside__item">Git, Docker, Vercel, Webpack</li>
-                        <li class="cv-aside__item">AI Tools (Claude Code, Copilot)</li>
+                <section class="aside-section">
+                    <h2 class="aside-section__title">Skills</h2>
+                    <ul class="skills">
+                        <li><span class="skills__cat">Languages</span> TypeScript, JavaScript, HTML5, CSS / SCSS</li>
+                        <li><span class="skills__cat">Frameworks</span> React, Next.js, Node.js</li>
+                        <li><span class="skills__cat">State &amp; Data</span> Redux Toolkit, React Query, Zustand</li>
+                        <li><span class="skills__cat">UI</span> Tailwind CSS, Radix UI, shadcn/ui</li>
+                        <li><span class="skills__cat">Backend</span> Supabase, PostgreSQL, REST / OpenAPI</li>
+                        <li><span class="skills__cat">Testing</span> Vitest, Playwright, Testing Library</li>
+                        <li><span class="skills__cat">DevOps</span> Git, Docker, Kubernetes, CI/CD, Vercel</li>
+                        <li><span class="skills__cat">AI Dev</span> Claude Code, agent-first workflow, Cursor</li>
                     </ul>
                 </section>
 
-                <section class="cv-aside__section">
-                    <h2 class="cv-aside__heading">Soft Skills</h2>
-                    <div class="line line--sm"></div>
-                    <ul class="cv-aside__list">
-                        <li class="cv-aside__item">Product Ownership</li>
-                        <li class="cv-aside__item">Mentoring & Code Review</li>
-                        <li class="cv-aside__item">Agile / Scrum</li>
-                        <li class="cv-aside__item">Cross-functional Collaboration</li>
+                <section class="aside-section">
+                    <h2 class="aside-section__title">Languages</h2>
+                    <ul class="aside-list aside-list--plain">
+                        <li>Polish (B2)</li>
+                        <li>English (B2)</li>
+                        <li>Ukrainian (Native)</li>
                     </ul>
                 </section>
 
-                <section class="cv-aside__section">
-                    <h2 class="cv-aside__heading">Languages</h2>
-                    <div class="line line--sm"></div>
-                    <ul class="cv-aside__list">
-                        <li class="cv-aside__item">Polish — B2</li>
-                        <li class="cv-aside__item">English — B2</li>
-                        <li class="cv-aside__item">Ukrainian — Native</li>
+                <section class="aside-section">
+                    <h2 class="aside-section__title">Strengths</h2>
+                    <ul class="aside-list aside-list--plain">
+                        <li>Mentoring &amp; Code Review</li>
+                        <li>Agile / Scrum</li>
+                        <li>Cross-functional Collaboration</li>
                     </ul>
                 </section>
 
-                <section class="cv-aside__section">
-                    <h2 class="cv-aside__heading">Availability</h2>
-                    <div class="line line--sm"></div>
-                    <p class="cv-aside__text">
-                        Available immediately. Open to Remote, Hybrid, or On-site roles (preferred: Wrocław). Willing to relocate.
-                    </p>
+                <section class="aside-section">
+                    <h2 class="aside-section__title">Availability</h2>
+                    <p class="aside-text">Available with 2 weeks' notice. Open to Remote, Hybrid, or On-site (Wrocław). Willing to relocate.</p>
                 </section>
             </aside>
 
             <main class="cv__main">
-                <div class="cv-aside__contact">
-                    <h1 class="cv-aside__name">Yaroslav Stopenchuk</h1>
-                    <div class="line line--lg"></div>
-                    <p class="cv-main__text">
-                        <strong>Frontend / Full-Stack Developer</strong> with 3+ years of experience in <strong>React, Next.js, and TypeScript</strong>. Shipped 10+ commercial projects at a software house and built a multi-tenant SaaS with Stripe billing, RBAC, and analytics. Delivers end-to-end — from UI to database.
-                    </p>
-                </div>
+                <header class="masthead">
+                    <h1 class="masthead__name">Yaroslav Stopenchuk</h1>
+                    <p class="masthead__title">Frontend / Full-Stack Developer</p>
+                    <p class="masthead__stack">React · Next.js · TypeScript</p>
+                </header>
 
-                <section class="cv-main__section">
-                    <h2 class="cv-main__heading">Work Experience</h2>
-                    <div class="line line--sm"></div>
+                <p class="summary">
+                    Frontend / Full-Stack Developer with 3+ years building <strong>React</strong>, <strong>Next.js</strong>, and <strong>TypeScript</strong> products, from 10+ commercial software-house projects to a self-built multi-tenant SaaS with role-based access control. Comfortable end-to-end, from UI to database, testing, and CI/CD.
+                </p>
 
-                    <article class="cv-job">
-                        <div class="cv-job__header">
-                            <div>
-                                <h3 class="cv-job__title">Freelance Full-Stack Developer</h3>
-                                <p class="cv-job__company">Smart Shift / Freelance</p>
-                            </div>
-                            <p class="cv-job__period">May 2025 — Present</p>
+                <section class="main-section">
+                    <h2 class="main-section__title">Experience</h2>
+
+                    <article class="job">
+                        <div class="job__head">
+                            <h3 class="job__role">Full-Stack Developer</h3>
+                            <span class="job__dates">Mar 2026 - Present</span>
                         </div>
-                        <ul class="cv-job__list">
-                            <li class="cv-job__item">
-                                Built <strong>Smart Shift Scheduler</strong> — a <strong>multi-tenant</strong> workforce SaaS using <strong>Next.js 16</strong>, <strong>TypeScript</strong>, and <strong>Supabase</strong> (PostgreSQL + RLS) with complete org-level data isolation.
-                            </li>
-                            <li class="cv-job__item">
-                                Engineered <strong>Stripe</strong> subscriptions (3 tiers, webhooks, feature-gating), <strong>4-tier RBAC</strong>, token-based invitations, and transactional emails via <strong>Resend</strong>.
-                            </li>
-                            <li class="cv-job__item">
-                                Implemented drag-and-drop scheduling (<strong>@dnd-kit</strong>) with <strong>optimistic updates</strong>, shift-generation algorithm (PTO, availability, holidays), and <strong>Recharts</strong> analytics dashboard.
-                            </li>
-                            <li class="cv-job__item">
-                                Delivered <strong>i18n</strong> (EN/PL/UK), <strong>dark mode</strong>, <strong>PWA</strong>, mobile-first design, and onboarding wizard. <strong>Lighthouse: 100 / 100 / 96</strong>.
-                            </li>
+                        <p class="job__org">PLZ Spółdzielnia, Warsaw (Remote)</p>
+                        <ul class="job__bullets">
+                            <li>Lead an <strong>agent-first development</strong> workflow: turn requirements into specs, then direct <strong>Claude Code</strong> to implement, shipping features <strong>~2× faster</strong> than hand-coding while owning review and testing.</li>
+                            <li>Building an <strong>AI assistant web client</strong> in <strong>React 19</strong> + <strong>TypeScript</strong> with real-time <strong>SSE</strong> streaming, <strong>Zustand</strong> state, a type-safe <strong>OpenAPI</strong> client, and a <strong>Radix/shadcn</strong> + <strong>Tailwind CSS</strong> UI.</li>
+                            <li>Shipped <strong>document generation</strong> (DOCX/PDF), file uploads, and <strong>voice I/O</strong> in an accessible, <strong>i18n</strong> (PL/EN) interface.</li>
+                            <li>Cover the app with <strong>Vitest</strong> + <strong>Playwright</strong> tests (<strong>~80% coverage</strong>); ship via multi-stage <strong>Docker</strong> and <strong>Kubernetes</strong> on <strong>GitHub Actions</strong> CI/CD.</li>
                         </ul>
                     </article>
 
-                    <article class="cv-job">
-                        <div class="cv-job__header">
-                            <div>
-                                <h3 class="cv-job__title">Frontend Developer</h3>
-                                <p class="cv-job__company">RED Software House, Wrocław</p>
-                            </div>
-                            <p class="cv-job__period">Oct 2023 — May 2025</p>
+                    <article class="job">
+                        <div class="job__head">
+                            <h3 class="job__role">Independent Developer</h3>
+                            <span class="job__dates">May 2025 - Feb 2026</span>
                         </div>
-                        <ul class="cv-job__list">
-                            <li class="cv-job__item">
-                                Delivered <strong>10+ commercial projects</strong> (Next.js, Gatsby) for clients including Opera, Warsaw Museum, and social platforms, optimizing initial load times by <strong>~12%</strong> via GSAP/asset optimization.
-                            </li>
-                            <li class="cv-job__item">
-                                <strong>Elektrobohater (Social Platform):</strong> Architected a complex SPA from scratch using <strong>Redux Toolkit & React Query</strong> — real-time feeds, advanced filtering, and content management for thousands of users.
-                            </li>
-                            <li class="cv-job__item">
-                                <strong>Warsaw Museum:</strong> Modernized legacy React, fixed Docker environments, and built shopping cart logic — cutting editorial turnaround by <strong>30%</strong>.
-                            </li>
-                            <li class="cv-job__item">
-                                <strong>Mentorship:</strong> Onboarded a Junior Developer, providing hands-on code reviews and guidance, reducing their ramp-up time by <strong>~40%</strong>.
-                            </li>
+                        <p class="job__org">Self-directed</p>
+                        <ul class="job__bullets">
+                            <li>Built <strong>Smart Shift Scheduler</strong>, a self-initiated multi-tenant workforce SaaS (<strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>Supabase</strong>/PostgreSQL + RLS) with 4-tier RBAC and complete org-level data isolation.</li>
+                            <li>Implemented drag-and-drop scheduling (@dnd-kit) and a shift-generation algorithm that cut manual scheduling time <strong>~75%</strong>, plus a Recharts analytics dashboard, i18n, dark mode, and PWA (<strong>Lighthouse 100 / 100 / 96</strong>).</li>
+                            <li>Engineered token-based team invitations, transactional emails, and a guided onboarding wizard.</li>
+                            <li>Delivered several smaller freelance web projects for clients alongside the product build.</li>
                         </ul>
                     </article>
 
-                    <article class="cv-job">
-                        <div class="cv-job__header">
-                            <div>
-                                <h3 class="cv-job__title">Frontend Developer (Training Program)</h3>
-                                <p class="cv-job__company">Itransition</p>
-                            </div>
-                            <p class="cv-job__period">Sep 2022 — Nov 2022</p>
+                    <article class="job">
+                        <div class="job__head">
+                            <h3 class="job__role">Frontend Developer</h3>
+                            <span class="job__dates">Oct 2023 - May 2025</span>
                         </div>
-                        <ul class="cv-job__list">
-                            <li class="cv-job__item">Completed 3-month training program: React, MUI, and Agile workflows.</li>
-                            <li class="cv-job__item">Delivered 6 coding assignments and a final project; passed technical interview.</li>
+                        <p class="job__org">RED Software House, Wrocław</p>
+                        <ul class="job__bullets">
+                            <li>Delivered <strong>10+ commercial projects</strong> (Next.js, Gatsby) for clients including Opera and the Warsaw Museum, cutting initial load times ~12% via GSAP and asset optimization.</li>
+                            <li>Built <strong>Elektrobohater</strong>, a social-platform SPA, with <strong>Redux Toolkit</strong> &amp; <strong>React Query</strong>: real-time feeds, filtering, and content management for thousands of users.</li>
+                            <li>Mentored a junior developer with hands-on code reviews, reducing their ramp-up time ~40%.</li>
                         </ul>
                     </article>
                 </section>
 
-                <section class="cv-main__section">
-                    <h2 class="cv-main__heading">Key Projects</h2>
-                    <div class="line line--sm"></div>
-                    <ul class="cv-projects__list">
-                        <li class="cv-projects__item">
-                            <strong>Smart Shift Scheduler</strong> (Next.js 16, TypeScript, Supabase, Stripe) <br>
-                            Production multi-tenant SaaS: drag-and-drop scheduling, RBAC, analytics dashboard, i18n, PWA.
-                            <a href="https://smart-shift-scheduler.vercel.app/" class="cv-link" target="_blank" rel="noopener noreferrer">[Demo]</a>
+                <section class="main-section">
+                    <h2 class="main-section__title">Projects</h2>
+                    <ul class="projects">
+                        <li>
+                            <strong>Smart Shift Scheduler</strong> <span class="projects__tech">(Next.js, TypeScript, Supabase)</span><br>
+                            Production multi-tenant SaaS: scheduling, RBAC, analytics dashboard, i18n, PWA.
+                            <a href="https://smart-shift-scheduler.vercel.app/" class="cv-link">Demo ↗</a>
                         </li>
-                        <li class="cv-projects__item">
-                            <strong>Warsaw Museum Collections</strong> (React, Docker) <br>
-                            Refactored legacy codebase from Class components to Hooks and implemented shopping cart logic.
-                            <a href="https://kolekcje.muzeumwarszawy.pl/en/" class="cv-link" target="_blank" rel="noopener noreferrer">[Live Site]</a>
-                        </li>
-                        <li class="cv-projects__item">
-                            <strong>Elektrobohater</strong> (React, Redux Toolkit, React Query) <br>
+                        <li>
+                            <strong>Elektrobohater</strong> <span class="projects__tech">(React, Redux Toolkit, React Query)</span><br>
                             Social platform for electricians with real-time feeds, filtering, and user profiles.
-                            <a href="https://elektrobohater.pl/" class="cv-link" target="_blank" rel="noopener noreferrer">[Live Site]</a>
+                            <a href="https://elektrobohater.pl/" class="cv-link">Live ↗</a>
                         </li>
-                        <li class="cv-projects__item">
-                            <strong>RED Software Site</strong> (Gatsby, GSAP) <br>
-                            Full refactor. Implemented dynamic routing for multi-language support and high-performance animations.
-                            <a href="https://redsoftware.io/" class="cv-link" target="_blank" rel="noopener noreferrer">[Live Site]</a>
+                        <li>
+                            <strong>Warsaw Museum Collections</strong> <span class="projects__tech">(React, Docker)</span><br>
+                            Refactored a legacy class-component codebase to hooks and built shopping-cart logic.
+                            <a href="https://kolekcje.muzeumwarszawy.pl/en/" class="cv-link">Live ↗</a>
+                        </li>
+                        <li>
+                            <strong>RED Software House Site</strong> <span class="projects__tech">(Gatsby, GSAP)</span><br>
+                            Full refactor with multi-language routing and high-performance GSAP animations.
+                            <a href="https://redsoftware.io/" class="cv-link">Live ↗</a>
                         </li>
                     </ul>
                 </section>
-                <section class="cv-main__section">
-                    <h2 class="cv-main__heading">Education</h2>
-                    <div class="line line--sm"></div>
-                    <article class="cv-job">
-                        <div class="cv-job__header">
-                            <div>
-                                <h3 class="cv-job__title">Bachelor of Computer Science</h3>
-                                <p class="cv-job__company">Lviv Polytechnic National University</p>
-                            </div>
-                            <p class="cv-job__period">2019 — 2023</p>
+
+                <section class="main-section">
+                    <h2 class="main-section__title">Education</h2>
+                    <article class="job">
+                        <div class="job__head">
+                            <h3 class="job__role">Bachelor of Computer Science</h3>
+                            <span class="job__dates">2019 - 2023</span>
                         </div>
+                        <p class="job__org">Lviv Polytechnic National University</p>
                     </article>
                 </section>
             </main>
+
         </div>
     </div>
 </div>
